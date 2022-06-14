@@ -60,3 +60,38 @@
 // };
 
 // console.log(generateSecretCode("neogcamp", 2));
+
+// ------------------------------------------------------------------
+
+// find area of hexagon
+// function findHexagonArea(length) {
+//   return (((3 * Math.sqrt(3)) / 2) * length * length).toFixed(2);
+// }
+
+// console.log(findHexagonArea(10));
+
+// Given an array and an item, your function should return the index at which the item is present.
+
+// const getElementIndex = (arr, element) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === element) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
+
+// console.log(getElementIndex([1, 2, 8, 6, 5], 8));
+
+// Given a sentence, return a sentence with first letter of all words as capital.
+
+// const capatalizeWords = (sentence) => {
+//   let sentenceArr = sentence.split(" ");
+//   let result = [];
+//   for (let i = 0; i < sentenceArr.length; i++) {
+//     result.push(sentenceArr[i][0].toUpperCase() + sentenceArr[i].slice(1));
+//   }
+//   return result;
+// };
+
+// console.log(capatalizeWords("hi i am tanishk"));
