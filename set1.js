@@ -95,3 +95,45 @@
 // };
 
 // console.log(capatalizeWords("hi i am tanishk"));
+
+// ------------------------------------------------------------------------------------------------
+
+// Given a sentence, your functions should return the number of words in the sentence.
+// const countLetters = (sentence) => {
+//   let counter = 0;
+//   for (let i = 0; i < sentence.length; i++) {
+//     if (sentence[i] !== " ") {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// };
+// console.log(countLetters("           We are neoGrammers     "));
+
+// const replaceNumbers = (arr, num, replaceBy) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === num) {
+//       arr[i] = replaceBy;
+//     }
+//   }
+//   console.log(arr);
+// };
+
+// console.log(replaceNumbers([1, 5, 3, 5, 6, 8], 5, 10));
+
+// Given an array of numbers, your function should return an array in the ascending order.
+// Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
+
+const sortArray = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // swaping
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  console.log(arr);
+};
+
+console.log(sortArray([100, 83, 32, 9, 45, 61, 8]));
