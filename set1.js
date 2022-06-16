@@ -61,7 +61,7 @@
 
 // console.log(generateSecretCode("neogcamp", 2));
 
-// ------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
 
 // find area of hexagon
 // function findHexagonArea(length) {
@@ -124,16 +124,50 @@
 // Given an array of numbers, your function should return an array in the ascending order.
 // Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
 
-const sortArray = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        // swaping
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-      }
-    }
-  }
-  console.log(arr);
-};
+// const sortArray = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         // swaping
+//         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+//       }
+//     }
+//   }
+//   console.log(arr);
+// };
 
-console.log(sortArray([100, 83, 32, 9, 45, 61, 8]));
+// console.log(sortArray([100, 83, 32, 9, 45, 61, 8]));
+
+// ---------------------------------------------------------------------------------------------------------
+
+// find minimum value
+// const findMin = (...args) => {
+//   let minValue = args[0];
+//   for (let i = 0; i < args.length; i++) {
+//     if (minValue > args[i]) {
+//       minValue = args[i];
+//     }
+//   }
+//   return minValue;
+// };
+
+// console.log(findMin(1, -3, 5, 8, 5, 4, 8, 9, 2));
+
+// Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
+
+// const reverseCharactersOfWord = (sentence) => {
+//   let reversedStr = "";
+//   let temp = "";
+//   for (let i = sentence.length - 1; i >= 0; i--) {
+//     if (sentence[i] === " ") {
+//       reversedStr = " " + temp + reversedStr;
+//       temp = "";
+//     } else {
+//       temp += sentence[i];
+//     }
+//   }
+//   reversedStr = temp + reversedStr;
+//   return reversedStr;
+// };
+
+// console.log(reverseCharactersOfWord("we are neoGrammers"));
