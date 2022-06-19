@@ -155,19 +155,22 @@
 
 // Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
 
-// const reverseCharactersOfWord = (sentence) => {
-//   let reversedStr = "";
-//   let temp = "";
-//   for (let i = sentence.length - 1; i >= 0; i--) {
-//     if (sentence[i] === " ") {
-//       reversedStr = " " + temp + reversedStr;
-//       temp = "";
-//     } else {
-//       temp += sentence[i];
-//     }
-//   }
-//   reversedStr = temp + reversedStr;
-//   return reversedStr;
-// };
+const reverseCharactersOfWord = (sentence) => {
+  let reversedSentence = "";
+  let temp = "";
 
-// console.log(reverseCharactersOfWord("we are neoGrammers"));
+  for (let i = sentence.length - 1; i >= 0; i--) {
+    if (sentence[i] === " ") {
+      reversedSentence = " " + temp + reversedSentence;
+      temp = "";
+    } else {
+      temp += sentence[i];
+    }
+  }
+
+  reversedSentence = temp + reversedSentence;
+
+  return reversedSentence;
+};
+
+console.log(reverseCharactersOfWord("we are neoGrammers"));
