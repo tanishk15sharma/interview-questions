@@ -155,22 +155,60 @@
 
 // Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
 
-const reverseCharactersOfWord = (sentence) => {
-  let reversedSentence = "";
-  let temp = "";
+// const reverseCharactersOfWord = (sentence) => {
+//   let reversedSentence = "";
+//   let temp = "";
 
-  for (let i = sentence.length - 1; i >= 0; i--) {
-    if (sentence[i] === " ") {
-      reversedSentence = " " + temp + reversedSentence;
-      temp = "";
-    } else {
-      temp += sentence[i];
-    }
+//   for (let i = sentence.length - 1; i >= 0; i--) {
+//     if (sentence[i] === " ") {
+//       reversedSentence = " " + temp + reversedSentence;
+//       temp = "";
+//     } else {
+//       temp += sentence[i];
+//     }
+//   }
+
+//   reversedSentence = temp + reversedSentence;
+
+//   return reversedSentence;
+// };
+
+// console.log(reverseCharactersOfWord("we are neoGrammers"));
+
+// ----------------------------------------------------------------------------------
+
+const copySmallerStringToBigger = (str1, str2) => {
+  if (str1.length > str2.length) {
+    str1 += str2;
+    return str1;
+  } else {
+    str2 += str1;
+    return str2;
   }
-
-  reversedSentence = temp + reversedSentence;
-
-  return reversedSentence;
 };
 
-console.log(reverseCharactersOfWord("we are neoGrammers"));
+// console.log(copySmallerStringToBigger("smaller String", "bigger String"));
+
+const convertStringToUpperCase = (str) => {
+  let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    result += str[i].toUpperCase();
+  }
+  return result;
+};
+
+// console.log(convertStringToUpperCase(" heKl akm"));
+
+const replaceCharactersInAString = (str, c1, c2) => {
+  let result = "";
+
+  for (let letter of str) {
+    if (letter === c1) {
+      letter = c2;
+      console.log(letter);
+    }
+  }
+};
+
+console.log(replaceCharactersInAString("aaloo", "o", "u"));
