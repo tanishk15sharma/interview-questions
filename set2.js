@@ -121,6 +121,42 @@ const printTheMostRepeatedCharacter = (sentence) => {
   return max;
 };
 
-console.log(
-  printTheMostRepeatedCharacter("ddddddddasssssdasdssssssssssssasdasdasd")
-);
+// console.log(printTheMostRepeatedCharacter("dddasssssssasdasdasd"));
+
+// -----------------------------------------------------------------------------------------
+
+const sumOfDigitsInString = (numString) => {
+  let total = 0;
+  for (let num of numString) {
+    total += Number(num);
+  }
+  return total;
+};
+
+// console.log(sumOfDigitsInString("1234"));
+
+// Write a Program to Print N Odd Number in Descending Order.
+
+const printOddNum = (num) => {
+  for (let i = num; i > 0; i--) {
+    let oddNum = 2 * i - 1;
+    console.log(oddNum);
+  }
+};
+
+// console.log(printOddNum(4));
+
+// Write a Program to cyclically Rotate a Number by X positions in the left direction, as provided by the user.
+
+const rotateNumberByXPosition = (num, actualRotation) => {
+  const numStr = num.toString();
+
+  const rotatedStr =
+    numStr.slice(actualRotation) + numStr.slice(0, actualRotation);
+
+  return rotatedStr;
+};
+
+// console.log(rotateNumberByXPosition(1234, 2));
+
+// ----------------------------------------------------------------------------------------------
