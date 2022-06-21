@@ -75,4 +75,52 @@ const reverseWordWise = (str) => {
   return result;
 };
 
-console.log(reverseWordWise("Welcome to neoG Camp"));
+// console.log(reverseWordWise("Welcome to neoG Camp"));
+
+// -----------------------------------------------------------------------------------------
+
+const typeOfTriangle = (s1, s2, s3) => {
+  if (s1 + s2 + s3 !== 180) {
+    return console.log("its not a valid triangle");
+  }
+  if (s1 === s2 && s3 === s1) {
+    return console.log("equilatoral triangle");
+  }
+  if (s1 === s2 || s2 === s3 || s3 === s1) {
+    return console.log("Isoceles triangle");
+  } else {
+    console.log("Scalen triangle");
+  }
+};
+
+// console.log(typeOfTriangle(60, 60, 60));
+
+// A program that counts the value of each character and prints the most repeated character?
+
+const printTheMostRepeatedCharacter = (sentence) => {
+  let maxChar = {};
+  for (let i = 0; i < sentence.length; i++) {
+    if (maxChar[sentence[i]]) {
+      maxChar[sentence[i]]++;
+    } else {
+      maxChar[sentence[i]] = 1;
+    }
+  }
+
+  // let max = Object.entries(maxChar)[0];
+  let max = {
+    letter: "",
+    repeatedNum: 0,
+  };
+  for (let key in maxChar) {
+    if (maxChar[key] > max.repeatedNum) {
+      max.letter = key;
+      max.repeatedNum = maxChar[key];
+    }
+  }
+  return max;
+};
+
+console.log(
+  printTheMostRepeatedCharacter("ddddddddasssssdasdssssssssssssasdasdasd")
+);
