@@ -26,3 +26,24 @@ const reverseNum = (num) => {
 // console.log(reverseNum(32243));
 
 // ----------------------------------------------------------------------------
+
+const findTransposeOfAMatrix = (matrix) => {
+  let transpose = [...Array(matrix[0].length)].map((a) => []);
+
+  for (let i = 0; i < matrix[0].length; i++) {
+    for (let j = 0; j < matrix.length; j++) {
+      transpose[i][j] = matrix[j][i];
+    }
+  }
+
+  return transpose;
+};
+
+console.log(
+  findTransposeOfAMatrix([
+    [1, 2, 3],
+    [4, 5, 6],
+  ])
+);
+
+// -----------------------------------------------------------------------------
