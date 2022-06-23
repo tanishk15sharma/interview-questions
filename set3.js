@@ -186,3 +186,83 @@ const findLeastFrequentNum = (arr) => {
 // console.log(findLeastFrequentNum([2, 2, 3, 4, 4, 4, 2, 5, 5, 5, 6, 6, 8, 8]));
 
 // --------------------------------------------------------------------------------
+
+//Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.
+
+// ```jsx
+// Input: [0,2,0,3,12,0]
+// Output: [2,3,12,0,0,0]
+// ```;
+
+const moveZerosToEnd = (arr) => {
+  let nonZeroArr = [];
+  let zerosArr = [];
+
+  for (let num of arr) {
+    if (num === 0) {
+      zerosArr.push(num);
+    } else {
+      nonZeroArr.push(num);
+    }
+  }
+
+  return [...nonZeroArr, ...zerosArr];
+};
+
+// console.log(moveZerosToEnd([0, 2, 0, 3, 12, 0]));
+
+//Given an array nums with length n, return the element which occurred at least n/2 times in the array
+
+const majorityElement = (arr) => {
+  const numOccurences = {};
+  let halftime = Math.round(arr.length / 2);
+
+  for (let num of arr) {
+    if (numOccurences[num]) {
+      numOccurences[num]++;
+    } else {
+      numOccurences[num] = 1;
+    }
+  }
+
+  for (let key in numOccurences) {
+    if (numOccurences[key] >= halftime) {
+      return key;
+    }
+  }
+
+  return -1;
+};
+
+// console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));
+
+// Given a string `s`, *find the first non-repeating character in it and return its index* If it does not exist, return `-1`
+// ```jsx
+// Input: s = "neogcamp"
+// Output: "n"
+
+// Input: s = "nneeooggccaammpp"
+// Output: -1
+// ```;
+
+const firstUniqueChar = (str) => {
+  let strStorage = {};
+
+  for (let word of str) {
+    if (strStorage[word]) {
+      strStorage[word]++;
+    } else {
+      strStorage[word] = 1;
+    }
+  }
+
+  for (let key in strStorage) {
+    if (strStorage[key] === 1) {
+      return key;
+    }
+  }
+
+  return -1;
+};
+
+console.log(firstUniqueChar("neogcamp"));
